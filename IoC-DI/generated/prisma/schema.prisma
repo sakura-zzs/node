@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// 创建表结构
+
+//使用 @relation(fields: [authorId], references: [id]) 定义了与 Users 模型的关系：
+//fields: [authorId] 表示通过 authorId 字段来关联。
+//references: [id] 表示关联 Users 模型的 id 字段。
+
+model Post {
+  id       Int     @id @default(autoincrement()) // id 是主键，整数类型，自动递增
+  title    String // 文章标题，字符串类型
+  publish  Boolean @default(false) // 是否发布，布尔值类型，默认值为 false
+  author   Users   @relation(fields: [authorId], references: [id]) // 关联 Users 模型，表示文章的作者
+  authorId Int // 外键字段，关联 Users 模型的 id 字段
+}
+
+model Users {
+  id    Int    @id @default(autoincrement()) // 用户的唯一标识，主键，整数类型，自动递增
+  name  String // 用户的名字，字符串类型
+  email String @unique // 用户的邮箱，字符串类型，且必须唯一
+  posts Post[] // 表示一个用户可以有多个文章，与 Post 模型建立关系
+}

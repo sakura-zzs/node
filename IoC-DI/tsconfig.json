@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": false,
+    "lib": ["esnext","dom"],
+    "esModuleInterop": true,
+    // 开启装饰器和反射支持
+    "experimentalDecorators": true,               
+    "emitDecoratorMetadata": true,   
+    "types": ["reflect-metadata"] 
+  }
+}
