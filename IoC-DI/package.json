@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev":"nodemon ./src/main.ts",
+    "dev": "nodemon ./src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,8 +15,8 @@
     "@prisma/client": "6.6.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
-    "express": "^5.1.0",
-    "inversify": "^7.5.0",
+    "express": "4.21.2",
+    "inversify": "6.0.3",
     "inversify-express-utils": "^6.5.0",
     "reflect-metadata": "^0.2.2"
   },
