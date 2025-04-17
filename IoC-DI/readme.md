@@ -49,3 +49,10 @@ Reflect.getMetadata('metadataKey', 'target', 'propertyKey')
 再在类装饰器中通过反射拿到类中方法（路由处理函数）的元数据，进行路由注册（通过路由实例）
 
 这差不多就是装饰器管理路由的实现
+
+passport passport是一个流行的用于身份验证和授权的Node.js库
+passport-jwt Passport-JWT是Passport库的一个插件，用于支持使用JSON Web Token (JWT) 进行身份验证和授权
+jsonwebtoken 生成token的库
+通过passport和passport-jwt校验jsonwebtoken
+
+rest client vscode接口测试插件，通过编写.http文件来测试接口

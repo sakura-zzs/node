@@ -6,6 +6,7 @@ import { PrismaClient } from "../generated/prisma";
 import { PrismaDb } from "./db";
 import { UserController } from "./user/controller";
 import { UserService } from "./user/service";
+import { JWT } from './jwt';
 
 //创建IoC容器
 const container = new Container();
@@ -26,6 +27,9 @@ container.bind(PrismaDb).toSelf();
 container.bind('UserController').to(UserController);
 container.bind('UserService').to(UserService);
 
+// 绑定jwt
+container.bind(JWT).toSelf();
+
 //创建集成了依赖注入的express服务器
 /**
  * 1.整合依赖注入
@@ -39,6 +43,9 @@ const server = new InversifyExpressServer(container);
 // 注册中间件
 server.setConfig((app) => {
   app.use(express.json());
+  // 通过获取容器中的JWT实例初始化passport
+  app.use(container.get(JWT).initialize())
+
 });
 // 这里的app就是express
 const app = server.build();
