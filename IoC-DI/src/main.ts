@@ -43,6 +43,7 @@ const server = new InversifyExpressServer(container);
 // 注册中间件
 server.setConfig((app) => {
   app.use(express.json());
+  app.use(express.static('public'))
   // 通过获取容器中的JWT实例初始化passport
   app.use(container.get(JWT).initialize())
 
