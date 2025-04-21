@@ -152,6 +152,7 @@
       })
       // 监听当前房间消息，当前房间接收到消息就渲染到页面
       socket.on('message', ({ text, name }) => {
+      console.log(text, name,111)
         sendMessage({
           text,
           name

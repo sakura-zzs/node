@@ -72,7 +72,9 @@ const groupList = {}
 // 监听连接事件
 io.on('connection', (socket) => {
   // 监听加入房间事件
-  socket.on('join', ({name,room}) => {
+  socket.on('join', ({ name, room }) => {
+    // 将用户加入指定房间
+    socket.join(room)
     // 记录信息
     if(!groupList[room]){
       groupList[room] = [{name,room,id:socket.id}]
@@ -87,9 +89,10 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('groupList', groupList)
   })
   // 监听消息事件
-  socket.on('message', ({ name, room, text }) => {
+  socket.on('message', ({ text, name, room }) => {
+    console.log('收到消息', text, name, room);
     // 将消息发送给指定房间中的所有客户端， 但不包括发送者自己 
-    // socket.to包括发送者自己
+    // socket.to向指定房间的所有客户端发送消息，但不包括发送者自己
     socket.broadcast.to(room).emit('message', { name, text })
   })
   socket.on('disconnect', () => {
