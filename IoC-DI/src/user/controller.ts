@@ -9,10 +9,10 @@ import { join } from "path";
 // 读取lua脚本
 const script = fs.readFileSync(join(__dirname,'../lua/lottery.lua'), 'utf-8');
 // 实例化redis客户端
-const redis = new Ioredis({
-  port: 6379,
-  host: 'localhost',
-});
+// const redis = new Ioredis({
+//   port: 6379,
+//   host: 'localhost',
+// });
 // 过期时间，控制限流阀的持续时间，实际上是通过这个时间让redis的key过期的，然后重置，单位秒
 const TIME = 30
 // TIME时间内的点击上限
@@ -40,23 +40,23 @@ export class UserController{
     res.send(data)
   }
   // 模拟抽奖限流阀，30s内点击超过5次就提示重试
-  @httpGet('/lottery')
-  public async lottery(req: Request, res: Response) {
-    // 使用redis的eval命令执行lua脚本进行限流阀操作，达到上限提示操作频繁
-    /**
-     * redis.eval 第一个参数就是lua的代码我们用fs读取了它
-     * 第二个参数是key的数量我们有1个
-     * 第三个参数就是key，通过key给redis读写
-     * 第四个是arguments
-     * 第五个也是arguments
-     * 第六个是个回调成功的失败，成功会接受返回值
-     */
-    redis.eval(script, 1, key,CHAGE,TIME, (err, result) => {
-      if (err) {
-        console.error(err);
-      } else {
-        result === 1 ? res.send('操作频繁') : res.send('抽奖成功')
-      }
-    });
-  }
+  // @httpGet('/lottery')
+  // public async lottery(req: Request, res: Response) {
+  //   // 使用redis的eval命令执行lua脚本进行限流阀操作，达到上限提示操作频繁
+  //   /**
+  //    * redis.eval 第一个参数就是lua的代码我们用fs读取了它
+  //    * 第二个参数是key的数量我们有1个
+  //    * 第三个参数就是key，通过key给redis读写
+  //    * 第四个是arguments
+  //    * 第五个也是arguments
+  //    * 第六个是个回调成功的失败，成功会接受返回值
+  //    */
+  //   redis.eval(script, 1, key,CHAGE,TIME, (err, result) => {
+  //     if (err) {
+  //       console.error(err);
+  //     } else {
+  //       result === 1 ? res.send('操作频繁') : res.send('抽奖成功')
+  //     }
+  //   });
+  // }
 }

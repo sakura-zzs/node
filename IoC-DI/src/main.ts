@@ -7,6 +7,8 @@ import { PrismaDb } from "./db";
 import { UserController } from "./user/controller";
 import { UserService } from "./user/service";
 import { JWT } from './jwt';
+import { Server } from 'socket.io';
+import http from 'http';
 
 //创建IoC容器
 const container = new Container();
@@ -46,10 +48,65 @@ server.setConfig((app) => {
   app.use(express.static('public'))
   // 通过获取容器中的JWT实例初始化passport
   app.use(container.get(JWT).initialize())
-
+  // 允许跨域
+  app.use('*',(req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "*");
+    res.setHeader("Access-Control-Allow-Methods", "*");
+    next()
+  })
 });
 // 这里的app就是express
 const app = server.build();
-app.listen(3000, () => {
+// socket.io需要一个http.Server 实例，我们需要通过http模块创建服务
+const httpServer = http.createServer(app);
+// 创建socket.io实例
+const io = new Server(httpServer, {
+  // 允许跨域
+  cors:{
+    origin:'*'
+  }
+})
+// 用户列表
+const groupList = {}
+// 监听连接事件
+io.on('connection', (socket) => {
+  // 监听加入房间事件
+  socket.on('join', ({name,room}) => {
+    // 记录信息
+    if(!groupList[room]){
+      groupList[room] = [{name,room,id:socket.id}]
+    } else {
+      groupList[room].push({name,room,id:socket.id})
+    }
+    // 发送用户进入房间信息
+    socket.emit('message', { name: '管理员', text: `${name}进入了房间` })
+    // 发送房间用户列表给当前用户（更新当前用户）
+    socket.emit('groupList', groupList)
+    // 将消息广播给除了发送者以外的所有已连接的客户端（更新其他用户）
+    socket.broadcast.emit('groupList', groupList)
+  })
+  // 监听消息事件
+  socket.on('message', ({ name, room, text }) => {
+    // 将消息发送给指定房间中的所有客户端， 但不包括发送者自己 
+    // socket.to包括发送者自己
+    socket.broadcast.to(room).emit('message', { name, text })
+  })
+  socket.on('disconnect', () => {
+    Object.keys(groupList).forEach(key => {
+      // 获取到离开的用户
+      let leaver = groupList[key].find(item => item.id === socket.id)
+      // 广播给对应房间
+      if (leaver) {
+        socket.broadcast.to(leaver.room).emit('message', { name: '管理员', text: `${leaver.name}离开了房间` })
+      }
+      // 删除用户
+      groupList[key] = groupList[key].filter(item => item.id !== socket.id)
+    })
+    // 更新房间列表
+    socket.broadcast.emit('groupList', groupList)
+  });
+});
+httpServer.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
