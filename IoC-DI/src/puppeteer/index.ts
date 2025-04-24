@@ -1,7 +1,9 @@
 import puppeteer from "puppeteer";
 // 通过spawn启动子进程执行命令行
 import { spawn } from 'child_process'
+import path from 'path';
 (async function () {
+  // 获取输入的要爬取的菜单名称
   const btnText = process.argv[2]
   const browser = await puppeteer.launch({
       headless: false,//取消无头模式
@@ -24,8 +26,9 @@ import { spawn } from 'child_process'
           articleList.push(name)
       }
       console.log(articleList)
+      const pythonScriptPath = path.resolve(__dirname, 'py', 'index.py');
       //调用python脚本进行中文分词 输出词云图
-      const pythonProcess = spawn('python', ['./py/index.py', articleList.join(',')])
+      const pythonProcess = spawn('python', [pythonScriptPath, articleList.join(',')])
       pythonProcess.stdout.on('data', (data) => {
           console.log(data.toString())
       })
