@@ -51,6 +51,9 @@ importers:
       '@types/node':
         specifier: ^22.14.0
         version: 22.14.0
+      node-addon-api:
+        specifier: ^8.3.1
+        version: 8.3.1
       prisma:
         specifier: 6.6.0
         version: 6.6.0(typescript@5.8.3)
@@ -841,6 +844,10 @@ packages:
   netmask@2.0.2:
     resolution: {integrity: sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==, tarball: https://registry.npmmirror.com/netmask/-/netmask-2.0.2.tgz}
     engines: {node: '>= 0.4.0'}
+
+  node-addon-api@8.3.1:
+    resolution: {integrity: sha512-lytcDEdxKjGJPTLEfW4mYMigRezMlyJY8W4wxJK8zE533Jlb8L8dRuObJFWg2P+AuOIxoCgKF+2Oq4d4Zd0OUA==, tarball: https://registry.npmmirror.com/node-addon-api/-/node-addon-api-8.3.1.tgz}
+    engines: {node: ^18 || ^20 || >= 21}
 
   object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
@@ -1901,6 +1908,8 @@ snapshots:
   negotiator@0.6.3: {}
 
   netmask@2.0.2: {}
+
+  node-addon-api@8.3.1: {}
 
   object-assign@4.1.1: {}
 
