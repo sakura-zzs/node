@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="download">下载</button>
+  <script>
+    document.getElementById('download').addEventListener('click', function () {
+      fetch('/fileStreamDownload', {
+        method: 'POST',
+        body:JSON.stringify({
+          filename: '系统介绍 -对象管理.mp4'
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      })//将返回的文件流以二进制数组接受
+      .then(res=>res.arrayBuffer())
+      .then(res => {
+        // 转为blob
+        const blob = new Blob([res], { type: 'application/octet-stream' })
+        // 生成一个url
+        const url=URL.createObjectURL(blob)
+        // 生成一个a标签
+        const a = document.createElement('a')
+        a.href = url
+        // 下载的文件名
+        a.download = '系统介绍 -对象管理.mp4'
+        a.click()
+        // 释放内存
+        URL.revokeObjectURL(url)
+        a.remove()
+      })
+    })
+
+  </script>
+</body>
+</html>

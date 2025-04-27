@@ -6,6 +6,7 @@ import { PrismaClient } from "../generated/prisma";
 import { PrismaDb } from "./db";
 import { UserController } from "./user/controller";
 import { LargeFileUploadController } from './largeFileUpload/largeFileUploadController';
+import { FileStreamDownloadController } from './fileStreamDownload/fileStreamDownloadController';
 import { UserService } from "./user/service";
 import { JWT } from './jwt';
 import { Server } from 'socket.io';
@@ -29,6 +30,7 @@ container.bind(PrismaDb).toSelf();
 // 绑定控制器和服务
 container.bind('UserController').to(UserController);
 container.bind('LargeFileUploadController').to(LargeFileUploadController);
+container.bind('FileStreamDownloadController').to(FileStreamDownloadController);
 container.bind('UserService').to(UserService);
 
 // 绑定jwt
