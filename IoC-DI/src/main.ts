@@ -7,6 +7,7 @@ import { PrismaDb } from "./db";
 import { UserController } from "./user/controller";
 import { LargeFileUploadController } from './largeFileUpload/largeFileUploadController';
 import { FileStreamDownloadController } from './fileStreamDownload/fileStreamDownloadController';
+import { HttpCacheController } from './httpCache/httpCacheController';
 import { UserService } from "./user/service";
 import { JWT } from './jwt';
 import { Server } from 'socket.io';
@@ -31,6 +32,7 @@ container.bind(PrismaDb).toSelf();
 container.bind('UserController').to(UserController);
 container.bind('LargeFileUploadController').to(LargeFileUploadController);
 container.bind('FileStreamDownloadController').to(FileStreamDownloadController);
+container.bind('HttpCacheController').to(HttpCacheController);
 container.bind('UserService').to(UserService);
 
 // 绑定jwt
