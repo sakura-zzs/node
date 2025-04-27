@@ -4,3 +4,5 @@ node_modules
 # 忽略生成的文件
 generated
 prisma/migrations
+public/merges
+public/uploads

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 通过将大文件切片上传，上传完后再进行合并实现 -->
+   <input type="file" id="largeFileUpload">
+   <script>
+     document.getElementById('largeFileUpload').addEventListener('change', function (e) {
+      console.log(e.target.files)
+       const file = e.target.files[0]
+      //  切片
+       const chunks = sliceFile(file)
+       // 上传
+       const filename = file.name.split('.')[0]
+       uploadAndMerge(filename,chunks)
+     })
+    //  切片，默认按4M切片
+    function sliceFile(file, chunkSize=4*1024*1024) {
+        const chunks=[]
+        for(let i=0;i<file.size;i+=chunkSize) {
+          const chunk = file.slice(i, i+chunkSize)
+          chunks.push(chunk) 
+        }
+        return chunks
+    }
+    // 上传切片并合并
+    function uploadAndMerge(filename,chunks) {
+       const promises = chunks.map((chunk, index) => {
+         const formData = new FormData()
+         formData.append('file', chunk)
+         formData.append('index', index)
+         formData.append('total', chunks.length)
+         formData.append('filename', filename)
+         return fetch('/largeFileUpload/upload',{
+          method: 'POST',
+          body: formData
+         })
+       })
+       Promise.all(promises).then(() => {
+         fetch('/largeFileUpload/merge', {
+           method: 'POST',
+           headers:{
+               'Content-Type': 'application/json'
+            },
+           body: JSON.stringify({
+             filename
+           })
+         }).then(() => {
+           console.log('文件上传成功')
+         })
+       }) 
+    }
+   </script>
+</body>
+</html>
