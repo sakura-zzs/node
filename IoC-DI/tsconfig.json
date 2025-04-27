@@ -8,6 +8,9 @@
     // 开启装饰器和反射支持
     "experimentalDecorators": true,               
     "emitDecoratorMetadata": true,   
-    "types": ["reflect-metadata"] 
+    // 增加nodejs的类型支持
+    "types": ["reflect-metadata","node"],
+    // 增加nodejs的模块解析支持，让ts可以识别nodejs的内置模块
+    "moduleResolution": "node"
   }
 }
