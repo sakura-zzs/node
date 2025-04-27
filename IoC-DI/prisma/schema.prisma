@@ -33,3 +33,20 @@ model Users {
   email String @unique // 用户的邮箱，字符串类型，且必须唯一
   posts Post[] // 表示一个用户可以有多个文章，与 Post 模型建立关系
 }
+// 短链映射表，用于存储短码与原始 URL 的对应关系
+model Short {
+  // 主键，自增整数
+  id      Int    @id @default(autoincrement())
+
+  // 短码（唯一标识），用于生成短链接
+  short_id String @unique @db.VarChar(255)
+  
+  // 原始网址，需支持超长文本
+  url     String @db.Text
+
+  // 指定字符集和排序规则，支持 Unicode 表情符号，不区分大小写和重音。
+  // ALTER TABLE `short` CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+  // 注意：Prisma 不直接支持 @@charset 和 @@collation
+  // 这些设置需要在数据库连接字符串或迁移时手动设置
+
+}
