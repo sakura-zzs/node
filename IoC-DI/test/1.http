@@ -6,5 +6,11 @@
 #     "email":"123456@qq.com"
 # }
 
-GET http://localhost:3000/user/index HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Imt1cm9uZWtvIiwiZW1haWwiOiIxMjM0NTZAcXEuY29tIiwiaWF0IjoxNzQ0OTA5MDU4LCJleHAiOjE3NDQ5MTI2NTh9.z3GeiNUAWfIsj7Jfk2mBXri5uY27KFhd3n9EhVJvdDk
+# GET http://localhost:3000/user/index HTTP/1.1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Imt1cm9uZWtvIiwiZW1haWwiOiIxMjM0NTZAcXEuY29tIiwiaWF0IjoxNzQ0OTA5MDU4LCJleHAiOjE3NDQ5MTI2NTh9.z3GeiNUAWfIsj7Jfk2mBXri5uY27KFhd3n9EhVJvdDk
+POST http://localhost:3000/shortLink/create HTTP/1.1
+content-type: application/json
+
+{
+    "url":"https://juejin.cn/post/7353073795081551911"
+}

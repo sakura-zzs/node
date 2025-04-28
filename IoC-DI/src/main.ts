@@ -9,6 +9,8 @@ import { LargeFileUploadController } from './largeFileUpload/largeFileUploadCont
 import { FileStreamDownloadController } from './fileStreamDownload/fileStreamDownloadController';
 import { HttpCacheController } from './httpCache/httpCacheController';
 import { UserService } from "./user/service";
+import { ShortLinkCreateController } from './shortLinkCreate/shortLinkCreateController';
+import { ShortLinkCreateService } from './shortLinkCreate/shortLinkCreateService';
 import { JWT } from './jwt';
 import { Server } from 'socket.io';
 import http from 'http';
@@ -34,6 +36,8 @@ container.bind('LargeFileUploadController').to(LargeFileUploadController);
 container.bind('FileStreamDownloadController').to(FileStreamDownloadController);
 container.bind('HttpCacheController').to(HttpCacheController);
 container.bind('UserService').to(UserService);
+container.bind('ShortLinkCreateController').to(ShortLinkCreateController);
+container.bind('ShortLinkCreateService').to(ShortLinkCreateService);
 
 // 绑定jwt
 container.bind(JWT).toSelf();
