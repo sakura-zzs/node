@@ -26,7 +26,8 @@
     "puppeteer": "^24.7.0",
     "reflect-metadata": "^0.2.2",
     "shortid": "^2.2.17",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.1",
+    "ws": "^8.18.1"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
