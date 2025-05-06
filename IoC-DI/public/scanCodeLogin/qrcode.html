@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img id="qrcode" src="" alt="">
+  <div id="status-div"></div>
+  <script>
+    const qrcode=document.getElementById('qrcode')
+    const statusDiv=document.getElementById('status-div')
+    let userId=null
+    fetch('/scl/qrcode').then(res=>res.json()).then(data=>{
+      userId=data.userId
+      qrcode.src=data.code
+      statusDiv.innerHTML='Scan the QR code'
+      // 轮询授权状态
+      let timer=setInterval(()=>{
+        fetch('/scl/check?userId='+userId).then(res=>res.json()).then(data=>{
+          statusDiv.innerHTML=data.msg
+            if(data.code===200){
+              clearInterval(timer)
+            }
+        })
+      },1000)
+    })
+  </script>
+</body>
+</html>

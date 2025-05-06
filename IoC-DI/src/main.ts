@@ -12,6 +12,7 @@ import { UserService } from "./user/service";
 import { ShortLinkCreateController } from './shortLinkCreate/shortLinkCreateController';
 import { ShortLinkCreateService } from './shortLinkCreate/shortLinkCreateService';
 import { JWT } from './jwt';
+import { ScanCodeLoginController } from './scanCodeLogin/scanCodeLoginController';
 import { Server } from 'socket.io';
 import http from 'http';
 
@@ -38,6 +39,7 @@ container.bind('HttpCacheController').to(HttpCacheController);
 container.bind('UserService').to(UserService);
 container.bind('ShortLinkCreateController').to(ShortLinkCreateController);
 container.bind('ShortLinkCreateService').to(ShortLinkCreateService);
+container.bind('ScanCodeLoginController').to(ScanCodeLoginController);
 
 // 绑定jwt
 container.bind(JWT).toSelf();
