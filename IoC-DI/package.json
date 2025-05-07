@@ -17,6 +17,7 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
     "express": "4.21.2",
+    "fastify": "^5.3.2",
     "inversify": "6.0.3",
     "inversify-express-utils": "^6.5.0",
     "ioredis": "^5.6.1",

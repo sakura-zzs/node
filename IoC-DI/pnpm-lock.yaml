@@ -23,6 +23,9 @@ importers:
       express:
         specifier: 4.21.2
         version: 4.21.2
+      fastify:
+        specifier: ^5.3.2
+        version: 5.3.2
       inversify:
         specifier: 6.0.3
         version: 6.0.3
@@ -243,6 +246,24 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@fastify/ajv-compiler@4.0.2':
+    resolution: {integrity: sha512-Rkiu/8wIjpsf46Rr+Fitd3HRP+VsxUFDDeag0hs9L0ksfnwx2g7SPQQTFL0E8Qv+rfXzQOxBJnjUB9ITUDjfWQ==, tarball: https://registry.npmmirror.com/@fastify/ajv-compiler/-/ajv-compiler-4.0.2.tgz}
+
+  '@fastify/error@4.1.0':
+    resolution: {integrity: sha512-KeFcciOr1eo/YvIXHP65S94jfEEqn1RxTRBT1aJaHxY5FK0/GDXYozsQMMWlZoHgi8i0s+YtrLsgj/JkUUjSkQ==, tarball: https://registry.npmmirror.com/@fastify/error/-/error-4.1.0.tgz}
+
+  '@fastify/fast-json-stringify-compiler@5.0.3':
+    resolution: {integrity: sha512-uik7yYHkLr6fxd8hJSZ8c+xF4WafPK+XzneQDPU+D10r5X19GW8lJcom2YijX2+qtFF1ENJlHXKFM9ouXNJYgQ==, tarball: https://registry.npmmirror.com/@fastify/fast-json-stringify-compiler/-/fast-json-stringify-compiler-5.0.3.tgz}
+
+  '@fastify/forwarded@3.0.0':
+    resolution: {integrity: sha512-kJExsp4JCms7ipzg7SJ3y8DwmePaELHxKYtg+tZow+k0znUTf3cb+npgyqm8+ATZOdmfgfydIebPDWM172wfyA==, tarball: https://registry.npmmirror.com/@fastify/forwarded/-/forwarded-3.0.0.tgz}
+
+  '@fastify/merge-json-schemas@0.2.1':
+    resolution: {integrity: sha512-OA3KGBCy6KtIvLf8DINC5880o5iBlDX4SxzLQS8HorJAbqluzLRn80UXU0bxZn7UOFhFgpRJDasfwn9nG4FG4A==, tarball: https://registry.npmmirror.com/@fastify/merge-json-schemas/-/merge-json-schemas-0.2.1.tgz}
+
+  '@fastify/proxy-addr@5.0.0':
+    resolution: {integrity: sha512-37qVVA1qZ5sgH7KpHkkC4z9SK6StIsIcOmpjvMPXNb3vx2GQxhZocogVYbr2PbbeLCQxYIPDok307xEvRZOzGA==, tarball: https://registry.npmmirror.com/@fastify/proxy-addr/-/proxy-addr-5.0.0.tgz}
+
   '@ioredis/commands@1.2.0':
     resolution: {integrity: sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg==}
 
@@ -321,6 +342,9 @@ packages:
   '@types/yauzl@2.10.3':
     resolution: {integrity: sha512-oJoftv0LSuaDZE3Le4DbKX+KS9G36NzOeSap90UIK0yMA/NhKJhqlSGtNDORNRaIbQfzjXDrQa0ytJ6mNRGz/Q==, tarball: https://registry.npmmirror.com/@types/yauzl/-/yauzl-2.10.3.tgz}
 
+  abstract-logging@2.0.1:
+    resolution: {integrity: sha512-2BjRTZxTPvheOvGbBslFSYOUkr+SjPtOnrLP33f+VIWLzezQpZcqVg7ja3L4dBXmzzgwT+a029jRx5PCi3JuiA==, tarball: https://registry.npmmirror.com/abstract-logging/-/abstract-logging-2.0.1.tgz}
+
   accepts@1.3.8:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==, tarball: https://registry.npmmirror.com/accepts/-/accepts-1.3.8.tgz}
     engines: {node: '>= 0.6'}
@@ -337,6 +361,17 @@ packages:
   agent-base@7.1.3:
     resolution: {integrity: sha512-jRR5wdylq8CkOe6hei19GGZnxM6rBGwFl3Bg0YItGDimvjGtAvdZk4Pu6Cl4u4Igsws4a1fd1Vq3ezrhn4KmFw==, tarball: https://registry.npmmirror.com/agent-base/-/agent-base-7.1.3.tgz}
     engines: {node: '>= 14'}
+
+  ajv-formats@3.0.1:
+    resolution: {integrity: sha512-8iUql50EUR+uUcdRQ3HDqa6EVyo3docL8g5WJ3FNcWmu62IbkGUue/pEyLBW8VGKKucTPgqeks4fIU1DA4yowQ==, tarball: https://registry.npmmirror.com/ajv-formats/-/ajv-formats-3.0.1.tgz}
+    peerDependencies:
+      ajv: ^8.0.0
+    peerDependenciesMeta:
+      ajv:
+        optional: true
+
+  ajv@8.17.1:
+    resolution: {integrity: sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==, tarball: https://registry.npmmirror.com/ajv/-/ajv-8.17.1.tgz}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==, tarball: https://registry.npmmirror.com/ansi-regex/-/ansi-regex-5.0.1.tgz}
@@ -361,6 +396,13 @@ packages:
   ast-types@0.13.4:
     resolution: {integrity: sha512-x1FCFnFifvYDDzTaLII71vG5uvDwgtmDTEVWAxrgeiR8VjMONcCXJx7E+USjDtHlwFmt9MysbqgF9b9Vjr6w+w==, tarball: https://registry.npmmirror.com/ast-types/-/ast-types-0.13.4.tgz}
     engines: {node: '>=4'}
+
+  atomic-sleep@1.0.0:
+    resolution: {integrity: sha512-kNOjDqAh7px0XWNI+4QbzoiR/nTkHAWNud2uvnJquD1/x5a7EQZMJT0AczqK0Qn67oY/TTQ1LbUKajZpp3I9tQ==, tarball: https://registry.npmmirror.com/atomic-sleep/-/atomic-sleep-1.0.0.tgz}
+    engines: {node: '>=8.0.0'}
+
+  avvio@9.1.0:
+    resolution: {integrity: sha512-fYASnYi600CsH/j9EQov7lECAniYiBFiiAtBNuZYLA2leLe9qOvZzqYHFjtIj6gD2VMoMLP14834LFWvr4IfDw==, tarball: https://registry.npmmirror.com/avvio/-/avvio-9.1.0.tgz}
 
   b4a@1.6.7:
     resolution: {integrity: sha512-OnAYlL5b7LEkALw87fUVafQw5rVR9RjwGd4KUwNQ6DrrNmaVaUCgLipfVlzrPQ4tWOR9P0IXGNOx50jYCCdSJg==, tarball: https://registry.npmmirror.com/b4a/-/b4a-1.6.7.tgz}
@@ -493,8 +535,12 @@ packages:
     engines: {node: '>= 0.6'}
 
   cookie@0.7.2:
-    resolution: {integrity: sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==}
+    resolution: {integrity: sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==, tarball: https://registry.npmmirror.com/cookie/-/cookie-0.7.2.tgz}
     engines: {node: '>= 0.6'}
+
+  cookie@1.0.2:
+    resolution: {integrity: sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==, tarball: https://registry.npmmirror.com/cookie/-/cookie-1.0.2.tgz}
+    engines: {node: '>=18'}
 
   core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==, tarball: https://registry.npmmirror.com/core-util-is/-/core-util-is-1.0.3.tgz}
@@ -560,6 +606,10 @@ packages:
   depd@2.0.0:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==, tarball: https://registry.npmmirror.com/depd/-/depd-2.0.0.tgz}
     engines: {node: '>= 0.8'}
+
+  dequal@2.0.3:
+    resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==, tarball: https://registry.npmmirror.com/dequal/-/dequal-2.0.3.tgz}
+    engines: {node: '>=6'}
 
   destroy@1.2.0:
     resolution: {integrity: sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==, tarball: https://registry.npmmirror.com/destroy/-/destroy-1.2.0.tgz}
@@ -674,8 +724,33 @@ packages:
     engines: {node: '>= 10.17.0'}
     hasBin: true
 
+  fast-decode-uri-component@1.0.1:
+    resolution: {integrity: sha512-WKgKWg5eUxvRZGwW8FvfbaH7AXSh2cL+3j5fMGzUMCxWBJ3dV3a7Wz8y2f/uQ0e3B6WmodD3oS54jTQ9HVTIIg==, tarball: https://registry.npmmirror.com/fast-decode-uri-component/-/fast-decode-uri-component-1.0.1.tgz}
+
+  fast-deep-equal@3.1.3:
+    resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==, tarball: https://registry.npmmirror.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz}
+
   fast-fifo@1.3.2:
     resolution: {integrity: sha512-/d9sfos4yxzpwkDkuN7k2SqFKtYNmCTzgfEpz82x34IM9/zc8KGxQoXg1liNC/izpRM/MBdt44Nmx41ZWqk+FQ==, tarball: https://registry.npmmirror.com/fast-fifo/-/fast-fifo-1.3.2.tgz}
+
+  fast-json-stringify@6.0.1:
+    resolution: {integrity: sha512-s7SJE83QKBZwg54dIbD5rCtzOBVD43V1ReWXXYqBgwCwHLYAAT0RQc/FmrQglXqWPpz6omtryJQOau5jI4Nrvg==, tarball: https://registry.npmmirror.com/fast-json-stringify/-/fast-json-stringify-6.0.1.tgz}
+
+  fast-querystring@1.1.2:
+    resolution: {integrity: sha512-g6KuKWmFXc0fID8WWH0jit4g0AGBoJhCkJMb1RmbsSEUNvQ+ZC8D6CUZ+GtF8nMzSPXnhiePyyqqipzNNEnHjg==, tarball: https://registry.npmmirror.com/fast-querystring/-/fast-querystring-1.1.2.tgz}
+
+  fast-redact@3.5.0:
+    resolution: {integrity: sha512-dwsoQlS7h9hMeYUq1W++23NDcBLV4KqONnITDV9DjfS3q1SgDGVrBdvvTLUotWtPSD7asWDV9/CmsZPy8Hf70A==, tarball: https://registry.npmmirror.com/fast-redact/-/fast-redact-3.5.0.tgz}
+    engines: {node: '>=6'}
+
+  fast-uri@3.0.6:
+    resolution: {integrity: sha512-Atfo14OibSv5wAp4VWNsFYE1AchQRTv9cBGWET4pZWHzYshFSS9NQI6I57rdKn9croWVMbYFbLhJ+yJvmZIIHw==, tarball: https://registry.npmmirror.com/fast-uri/-/fast-uri-3.0.6.tgz}
+
+  fastify@5.3.2:
+    resolution: {integrity: sha512-AIPqBgtqBAwkOkrnwesEE+dOyU30dQ4kh7udxeGVR05CRGwubZx+p2H8P0C4cRnQT0+EPK4VGea2DTL2RtWttg==, tarball: https://registry.npmmirror.com/fastify/-/fastify-5.3.2.tgz}
+
+  fastq@1.19.1:
+    resolution: {integrity: sha512-GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==, tarball: https://registry.npmmirror.com/fastq/-/fastq-1.19.1.tgz}
 
   fd-slicer@1.1.0:
     resolution: {integrity: sha512-cE1qsB/VwyQozZ+q1dGxR8LBYNZeofhEdUNGSMbQD3Gw2lAzX9Zb3uIU6Ebc/Fmyjo9AWWfnn0AUCHqtevs/8g==, tarball: https://registry.npmmirror.com/fd-slicer/-/fd-slicer-1.1.0.tgz}
@@ -683,6 +758,10 @@ packages:
   finalhandler@1.3.1:
     resolution: {integrity: sha512-6BN9trH7bp3qvnrRyzsBz+g3lZxTNZTbVO2EV1CS0WIcDbawYVdYvGflME/9QP0h0pYlCDBCTjYa9nZzMDpyxQ==, tarball: https://registry.npmmirror.com/finalhandler/-/finalhandler-1.3.1.tgz}
     engines: {node: '>= 0.8'}
+
+  find-my-way@9.3.0:
+    resolution: {integrity: sha512-eRoFWQw+Yv2tuYlK2pjFS2jGXSxSppAs3hSQjfxVKxM5amECzIgYYc1FEI8ZmhSh/Ig+FrKEz43NLRKJjYCZVg==, tarball: https://registry.npmmirror.com/find-my-way/-/find-my-way-9.3.0.tgz}
+    engines: {node: '>=20'}
 
   find-up@4.1.0:
     resolution: {integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==, tarball: https://registry.npmmirror.com/find-up/-/find-up-4.1.0.tgz}
@@ -784,6 +863,10 @@ packages:
     resolution: {integrity: sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==, tarball: https://registry.npmmirror.com/ipaddr.js/-/ipaddr.js-1.9.1.tgz}
     engines: {node: '>= 0.10'}
 
+  ipaddr.js@2.2.0:
+    resolution: {integrity: sha512-Ag3wB2o37wslZS19hZqorUnrnzSkpOVy+IiiDEiTqNubEYpYuHWIf6K4psgN2ZWKExS4xhVCrRVfb/wfW8fWJA==, tarball: https://registry.npmmirror.com/ipaddr.js/-/ipaddr.js-2.2.0.tgz}
+    engines: {node: '>= 10'}
+
   is-arrayish@0.2.1:
     resolution: {integrity: sha512-zz06S8t0ozoDXMG+ube26zeCTNXcKIPJZJi8hBrF4idCLms4CG9QtK7qBl1boi5ODzFpjswb5JPmHCbMpjaYzg==, tarball: https://registry.npmmirror.com/is-arrayish/-/is-arrayish-0.2.1.tgz}
 
@@ -807,6 +890,12 @@ packages:
   json-parse-even-better-errors@2.3.1:
     resolution: {integrity: sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==, tarball: https://registry.npmmirror.com/json-parse-even-better-errors/-/json-parse-even-better-errors-2.3.1.tgz}
 
+  json-schema-ref-resolver@2.0.1:
+    resolution: {integrity: sha512-HG0SIB9X4J8bwbxCbnd5FfPEbcXAJYTi1pBJeP/QPON+w8ovSME8iRG+ElHNxZNX2Qh6eYn1GdzJFS4cDFfx0Q==, tarball: https://registry.npmmirror.com/json-schema-ref-resolver/-/json-schema-ref-resolver-2.0.1.tgz}
+
+  json-schema-traverse@1.0.0:
+    resolution: {integrity: sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==, tarball: https://registry.npmmirror.com/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz}
+
   jsonwebtoken@9.0.2:
     resolution: {integrity: sha512-PRp66vJ865SSqOlgqS8hujT5U4AOgMfhrwYIuIhfKaoSCZcirrmASQr8CX7cUg+RMih+hgznrjp99o+W4pJLHQ==}
     engines: {node: '>=12', npm: '>=6'}
@@ -819,6 +908,9 @@ packages:
 
   libphonenumber-js@1.12.6:
     resolution: {integrity: sha512-PJiS4ETaUfCOFLpmtKzAbqZQjCCKVu2OhTV4SVNNE7c2nu/dACvtCqj4L0i/KWNnIgRv7yrILvBj5Lonv5Ncxw==, tarball: https://registry.npmmirror.com/libphonenumber-js/-/libphonenumber-js-1.12.6.tgz}
+
+  light-my-request@6.6.0:
+    resolution: {integrity: sha512-CHYbu8RtboSIoVsHZ6Ye4cj4Aw/yg2oAFimlF7mNvfDV192LR7nDiKtSIfCuLT7KokPSTn/9kfVLm5OGN0A28A==, tarball: https://registry.npmmirror.com/light-my-request/-/light-my-request-6.6.0.tgz}
 
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==, tarball: https://registry.npmmirror.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz}
@@ -934,6 +1026,10 @@ packages:
     resolution: {integrity: sha512-W67iLl4J2EXEGTbfeHCffrjDfitvLANg0UlX3wFUUSTx92KXRFegMHUVgSqE+wvhAbi4WqjGg9czysTV2Epbew==, tarball: https://registry.npmmirror.com/object-inspect/-/object-inspect-1.13.4.tgz}
     engines: {node: '>= 0.4'}
 
+  on-exit-leak-free@2.1.2:
+    resolution: {integrity: sha512-0eJJY6hXLGf1udHwfNftBqH+g73EU4B504nZeKpz1sYRKafAghwxEJunB2O7rDZkL4PGfsMVnTXZ2EjibbqcsA==, tarball: https://registry.npmmirror.com/on-exit-leak-free/-/on-exit-leak-free-2.1.2.tgz}
+    engines: {node: '>=14.0.0'}
+
   on-finished@2.4.1:
     resolution: {integrity: sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==, tarball: https://registry.npmmirror.com/on-finished/-/on-finished-2.4.1.tgz}
     engines: {node: '>= 0.8'}
@@ -1000,6 +1096,16 @@ packages:
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==, tarball: https://registry.npmmirror.com/picocolors/-/picocolors-1.1.1.tgz}
 
+  pino-abstract-transport@2.0.0:
+    resolution: {integrity: sha512-F63x5tizV6WCh4R6RHyi2Ml+M70DNRXt/+HANowMflpgGFMAym/VKm6G7ZOQRjqN7XbGxK1Lg9t6ZrtzOaivMw==, tarball: https://registry.npmmirror.com/pino-abstract-transport/-/pino-abstract-transport-2.0.0.tgz}
+
+  pino-std-serializers@7.0.0:
+    resolution: {integrity: sha512-e906FRY0+tV27iq4juKzSYPbUj2do2X2JX4EzSca1631EB2QJQUqGbDuERal7LCtOpxl6x3+nvo9NPZcmjkiFA==, tarball: https://registry.npmmirror.com/pino-std-serializers/-/pino-std-serializers-7.0.0.tgz}
+
+  pino@9.6.0:
+    resolution: {integrity: sha512-i85pKRCt4qMjZ1+L7sy2Ag4t1atFcdbEt76+7iRJn1g2BvsnRMGu9p8pivl9fs63M2kF/A0OacFZhTub+m/qMg==, tarball: https://registry.npmmirror.com/pino/-/pino-9.6.0.tgz}
+    hasBin: true
+
   pngjs@5.0.0:
     resolution: {integrity: sha512-40QW5YalBNfQo5yRYmiw7Yz6TKKVr3h6970B2YE+3fQpsWcrbj1PzJgxeJ19DRQjhMbKPIuMY8rFaXc8moolVw==, tarball: https://registry.npmmirror.com/pngjs/-/pngjs-5.0.0.tgz}
     engines: {node: '>=10.13.0'}
@@ -1016,6 +1122,12 @@ packages:
 
   process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==, tarball: https://registry.npmmirror.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz}
+
+  process-warning@4.0.1:
+    resolution: {integrity: sha512-3c2LzQ3rY9d0hc1emcsHhfT9Jwz0cChib/QN89oME2R451w5fy3f0afAhERFZAwrbDU43wk12d0ORBpDVME50Q==, tarball: https://registry.npmmirror.com/process-warning/-/process-warning-4.0.1.tgz}
+
+  process-warning@5.0.0:
+    resolution: {integrity: sha512-a39t9ApHNx2L4+HBnQKqxxHNs1r7KF+Intd8Q/g1bUh6q0WIp9voPXJ/x0j+ZL45KF1pJd9+q2jLIRMfvEshkA==, tarball: https://registry.npmmirror.com/process-warning/-/process-warning-5.0.0.tgz}
 
   progress@2.0.3:
     resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==, tarball: https://registry.npmmirror.com/progress/-/progress-2.0.3.tgz}
@@ -1053,6 +1165,9 @@ packages:
     resolution: {integrity: sha512-+38qI9SOr8tfZ4QmJNplMUxqjbe7LKvvZgWdExBOmd+egZTtjLB67Gu0HRX3u/XOq7UU2Nx6nsjvS16Z9uwfpg==, tarball: https://registry.npmmirror.com/qs/-/qs-6.13.0.tgz}
     engines: {node: '>=0.6'}
 
+  quick-format-unescaped@4.0.4:
+    resolution: {integrity: sha512-tYC1Q1hgyRuHgloV/YXs2w15unPVh8qfu/qCTfhTYamaw7fyhumKa2yGpdSo87vY32rIclj+4fWYQXUMs9EHvg==, tarball: https://registry.npmmirror.com/quick-format-unescaped/-/quick-format-unescaped-4.0.4.tgz}
+
   range-parser@1.2.1:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==, tarball: https://registry.npmmirror.com/range-parser/-/range-parser-1.2.1.tgz}
     engines: {node: '>= 0.6'}
@@ -1063,6 +1178,10 @@ packages:
 
   readable-stream@2.3.8:
     resolution: {integrity: sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==, tarball: https://registry.npmmirror.com/readable-stream/-/readable-stream-2.3.8.tgz}
+
+  real-require@0.2.0:
+    resolution: {integrity: sha512-57frrGM/OCTLqLOAh0mhVA9VBMHd+9U7Zb2THMGdBUoZVOtGbJzjxsYGDJ3A9AYYCP4hn6y1TVbaOfzWtm5GFg==, tarball: https://registry.npmmirror.com/real-require/-/real-require-0.2.0.tgz}
+    engines: {node: '>= 12.13.0'}
 
   redis-errors@1.2.0:
     resolution: {integrity: sha512-1qny3OExCf0UvUV/5wpYKf2YwPcOqXzkwKKSmKHiE6ZMQs5heeE/c8eXK+PNllPvmjgAbfnsbpkGZWy8cBpn9w==}
@@ -1079,6 +1198,10 @@ packages:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==, tarball: https://registry.npmmirror.com/require-directory/-/require-directory-2.1.1.tgz}
     engines: {node: '>=0.10.0'}
 
+  require-from-string@2.0.2:
+    resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==, tarball: https://registry.npmmirror.com/require-from-string/-/require-from-string-2.0.2.tgz}
+    engines: {node: '>=0.10.0'}
+
   require-main-filename@2.0.0:
     resolution: {integrity: sha512-NKN5kMDylKuldxYLSUfrbo5Tuzh4hd+2E8NPPX02mZtn1VuREQToYe/ZdlJy+J3uCpfaiGF05e7B8W0iXbQHmg==, tarball: https://registry.npmmirror.com/require-main-filename/-/require-main-filename-2.0.0.tgz}
 
@@ -1086,14 +1209,35 @@ packages:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==, tarball: https://registry.npmmirror.com/resolve-from/-/resolve-from-4.0.0.tgz}
     engines: {node: '>=4'}
 
+  ret@0.5.0:
+    resolution: {integrity: sha512-I1XxrZSQ+oErkRR4jYbAyEEu2I0avBvvMM5JN+6EBprOGRCs63ENqZ3vjavq8fBw2+62G5LF5XelKwuJpcvcxw==, tarball: https://registry.npmmirror.com/ret/-/ret-0.5.0.tgz}
+    engines: {node: '>=10'}
+
+  reusify@1.1.0:
+    resolution: {integrity: sha512-g6QUff04oZpHs0eG5p83rFLhHeV00ug/Yf9nZM6fLeUrPguBTkTQOdpAWWspMh55TZfVQDPaN3NQJfbVRAxdIw==, tarball: https://registry.npmmirror.com/reusify/-/reusify-1.1.0.tgz}
+    engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
+
+  rfdc@1.4.1:
+    resolution: {integrity: sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA==, tarball: https://registry.npmmirror.com/rfdc/-/rfdc-1.4.1.tgz}
+
   safe-buffer@5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==, tarball: https://registry.npmmirror.com/safe-buffer/-/safe-buffer-5.1.2.tgz}
 
   safe-buffer@5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==, tarball: https://registry.npmmirror.com/safe-buffer/-/safe-buffer-5.2.1.tgz}
 
+  safe-regex2@5.0.0:
+    resolution: {integrity: sha512-YwJwe5a51WlK7KbOJREPdjNrpViQBI3p4T50lfwPuDhZnE3XGVTlGvi+aolc5+RvxDD6bnUmjVsU9n1eboLUYw==, tarball: https://registry.npmmirror.com/safe-regex2/-/safe-regex2-5.0.0.tgz}
+
+  safe-stable-stringify@2.5.0:
+    resolution: {integrity: sha512-b3rppTKm9T+PsVCBEOUR46GWI7fdOs00VKZ1+9c1EWDaDMvjQc6tUwuFyIprgGgTcWoVHSKrU8H31ZHA2e0RHA==, tarball: https://registry.npmmirror.com/safe-stable-stringify/-/safe-stable-stringify-2.5.0.tgz}
+    engines: {node: '>=10'}
+
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==, tarball: https://registry.npmmirror.com/safer-buffer/-/safer-buffer-2.1.2.tgz}
+
+  secure-json-parse@4.0.0:
+    resolution: {integrity: sha512-dxtLJO6sc35jWidmLxo7ij+Eg48PM/kleBsxpC8QJE0qJICe+KawkDQmvCMZUr9u7WKVHgMW6vy3fQ7zMiFZMA==, tarball: https://registry.npmmirror.com/secure-json-parse/-/secure-json-parse-4.0.0.tgz}
 
   semver@7.7.1:
     resolution: {integrity: sha512-hlq8tAfn0m/61p4BVRcPzIGr6LKiMwo4VM6dGi6pt4qcRkmNzTcWq6eCEjEh+qXjkMDvPlOFFSGwQjoEa6gyMA==, tarball: https://registry.npmmirror.com/semver/-/semver-7.7.1.tgz}
@@ -1110,6 +1254,9 @@ packages:
 
   set-blocking@2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==, tarball: https://registry.npmmirror.com/set-blocking/-/set-blocking-2.0.0.tgz}
+
+  set-cookie-parser@2.7.1:
+    resolution: {integrity: sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==, tarball: https://registry.npmmirror.com/set-cookie-parser/-/set-cookie-parser-2.7.1.tgz}
 
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==, tarball: https://registry.npmmirror.com/setprototypeof/-/setprototypeof-1.2.0.tgz}
@@ -1156,9 +1303,16 @@ packages:
     resolution: {integrity: sha512-D3YaD0aRxR3mEcqnidIs7ReYJFVzWdd6fXJYUM8ixcQcJRGTka/b3saV0KflYhyVJXKhb947GndU35SxYNResQ==, tarball: https://registry.npmmirror.com/socks/-/socks-2.8.4.tgz}
     engines: {node: '>= 10.0.0', npm: '>= 3.0.0'}
 
+  sonic-boom@4.2.0:
+    resolution: {integrity: sha512-INb7TM37/mAcsGmc9hyyI6+QR3rR1zVRu36B0NeGXKnOOLiZOfER5SA+N7X7k3yUYRzLWafduTDvJAfDswwEww==, tarball: https://registry.npmmirror.com/sonic-boom/-/sonic-boom-4.2.0.tgz}
+
   source-map@0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==, tarball: https://registry.npmmirror.com/source-map/-/source-map-0.6.1.tgz}
     engines: {node: '>=0.10.0'}
+
+  split2@4.2.0:
+    resolution: {integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==, tarball: https://registry.npmmirror.com/split2/-/split2-4.2.0.tgz}
+    engines: {node: '>= 10.x'}
 
   sprintf-js@1.1.3:
     resolution: {integrity: sha512-Oo+0REFV59/rz3gfJNKQiBlwfHaSESl1pcGyABQsnnIfWOFt6JNj5gCog2U6MLZ//IGYD+nA8nI+mTShREReaA==, tarball: https://registry.npmmirror.com/sprintf-js/-/sprintf-js-1.1.3.tgz}
@@ -1196,6 +1350,13 @@ packages:
 
   text-decoder@1.2.3:
     resolution: {integrity: sha512-3/o9z3X0X0fTupwsYvR03pJ/DjWuqqrfwBgTQzdWDiQSm9KitAyz/9WqsT2JQW7KV2m+bC2ol/zqpW37NHxLaA==, tarball: https://registry.npmmirror.com/text-decoder/-/text-decoder-1.2.3.tgz}
+
+  thread-stream@3.1.0:
+    resolution: {integrity: sha512-OqyPZ9u96VohAyMfJykzmivOrY2wfMSf3C5TtFJVgN+Hm6aj+voFhlK+kZEIv2FBh1X6Xp3DlnCOfEQ3B2J86A==, tarball: https://registry.npmmirror.com/thread-stream/-/thread-stream-3.1.0.tgz}
+
+  toad-cache@3.7.0:
+    resolution: {integrity: sha512-/m8M+2BJUpoJdgAHoG+baCwBT+tf2VraSfkBgl0Y00qIWt41DJ8R5B8nsEw0I58YwF5IZH6z24/2TobDKnqSWw==, tarball: https://registry.npmmirror.com/toad-cache/-/toad-cache-3.7.0.tgz}
+    engines: {node: '>=12'}
 
   toidentifier@1.0.1:
     resolution: {integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==, tarball: https://registry.npmmirror.com/toidentifier/-/toidentifier-1.0.1.tgz}
@@ -1422,6 +1583,29 @@ snapshots:
   '@esbuild/win32-x64@0.25.2':
     optional: true
 
+  '@fastify/ajv-compiler@4.0.2':
+    dependencies:
+      ajv: 8.17.1
+      ajv-formats: 3.0.1(ajv@8.17.1)
+      fast-uri: 3.0.6
+
+  '@fastify/error@4.1.0': {}
+
+  '@fastify/fast-json-stringify-compiler@5.0.3':
+    dependencies:
+      fast-json-stringify: 6.0.1
+
+  '@fastify/forwarded@3.0.0': {}
+
+  '@fastify/merge-json-schemas@0.2.1':
+    dependencies:
+      dequal: 2.0.3
+
+  '@fastify/proxy-addr@5.0.0':
+    dependencies:
+      '@fastify/forwarded': 3.0.0
+      ipaddr.js: 2.2.0
+
   '@ioredis/commands@1.2.0': {}
 
   '@jridgewell/resolve-uri@3.1.2': {}
@@ -1506,6 +1690,8 @@ snapshots:
       '@types/node': 22.14.0
     optional: true
 
+  abstract-logging@2.0.1: {}
+
   accepts@1.3.8:
     dependencies:
       mime-types: 2.1.35
@@ -1518,6 +1704,17 @@ snapshots:
   acorn@8.14.1: {}
 
   agent-base@7.1.3: {}
+
+  ajv-formats@3.0.1(ajv@8.17.1):
+    optionalDependencies:
+      ajv: 8.17.1
+
+  ajv@8.17.1:
+    dependencies:
+      fast-deep-equal: 3.1.3
+      fast-uri: 3.0.6
+      json-schema-traverse: 1.0.0
+      require-from-string: 2.0.2
 
   ansi-regex@5.0.1: {}
 
@@ -1536,6 +1733,13 @@ snapshots:
   ast-types@0.13.4:
     dependencies:
       tslib: 2.8.1
+
+  atomic-sleep@1.0.0: {}
+
+  avvio@9.1.0:
+    dependencies:
+      '@fastify/error': 4.1.0
+      fastq: 1.19.1
 
   b4a@1.6.7: {}
 
@@ -1666,6 +1870,8 @@ snapshots:
 
   cookie@0.7.2: {}
 
+  cookie@1.0.2: {}
+
   core-util-is@1.0.3: {}
 
   cors@2.8.5:
@@ -1709,6 +1915,8 @@ snapshots:
   denque@2.1.0: {}
 
   depd@2.0.0: {}
+
+  dequal@2.0.3: {}
 
   destroy@1.2.0: {}
 
@@ -1873,7 +2081,50 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  fast-decode-uri-component@1.0.1: {}
+
+  fast-deep-equal@3.1.3: {}
+
   fast-fifo@1.3.2: {}
+
+  fast-json-stringify@6.0.1:
+    dependencies:
+      '@fastify/merge-json-schemas': 0.2.1
+      ajv: 8.17.1
+      ajv-formats: 3.0.1(ajv@8.17.1)
+      fast-uri: 3.0.6
+      json-schema-ref-resolver: 2.0.1
+      rfdc: 1.4.1
+
+  fast-querystring@1.1.2:
+    dependencies:
+      fast-decode-uri-component: 1.0.1
+
+  fast-redact@3.5.0: {}
+
+  fast-uri@3.0.6: {}
+
+  fastify@5.3.2:
+    dependencies:
+      '@fastify/ajv-compiler': 4.0.2
+      '@fastify/error': 4.1.0
+      '@fastify/fast-json-stringify-compiler': 5.0.3
+      '@fastify/proxy-addr': 5.0.0
+      abstract-logging: 2.0.1
+      avvio: 9.1.0
+      fast-json-stringify: 6.0.1
+      find-my-way: 9.3.0
+      light-my-request: 6.6.0
+      pino: 9.6.0
+      process-warning: 5.0.0
+      rfdc: 1.4.1
+      secure-json-parse: 4.0.0
+      semver: 7.7.1
+      toad-cache: 3.7.0
+
+  fastq@1.19.1:
+    dependencies:
+      reusify: 1.1.0
 
   fd-slicer@1.1.0:
     dependencies:
@@ -1890,6 +2141,12 @@ snapshots:
       unpipe: 1.0.0
     transitivePeerDependencies:
       - supports-color
+
+  find-my-way@9.3.0:
+    dependencies:
+      fast-deep-equal: 3.1.3
+      fast-querystring: 1.1.2
+      safe-regex2: 5.0.0
 
   find-up@4.1.0:
     dependencies:
@@ -2010,6 +2267,8 @@ snapshots:
 
   ipaddr.js@1.9.1: {}
 
+  ipaddr.js@2.2.0: {}
+
   is-arrayish@0.2.1: {}
 
   is-fullwidth-code-point@3.0.0: {}
@@ -2025,6 +2284,12 @@ snapshots:
   jsbn@1.1.0: {}
 
   json-parse-even-better-errors@2.3.1: {}
+
+  json-schema-ref-resolver@2.0.1:
+    dependencies:
+      dequal: 2.0.3
+
+  json-schema-traverse@1.0.0: {}
 
   jsonwebtoken@9.0.2:
     dependencies:
@@ -2051,6 +2316,12 @@ snapshots:
       safe-buffer: 5.2.1
 
   libphonenumber-js@1.12.6: {}
+
+  light-my-request@6.6.0:
+    dependencies:
+      cookie: 1.0.2
+      process-warning: 4.0.1
+      set-cookie-parser: 2.7.1
 
   lines-and-columns@1.2.4: {}
 
@@ -2130,6 +2401,8 @@ snapshots:
 
   object-inspect@1.13.4: {}
 
+  on-exit-leak-free@2.1.2: {}
+
   on-finished@2.4.1:
     dependencies:
       ee-first: 1.1.1
@@ -2202,6 +2475,26 @@ snapshots:
 
   picocolors@1.1.1: {}
 
+  pino-abstract-transport@2.0.0:
+    dependencies:
+      split2: 4.2.0
+
+  pino-std-serializers@7.0.0: {}
+
+  pino@9.6.0:
+    dependencies:
+      atomic-sleep: 1.0.0
+      fast-redact: 3.5.0
+      on-exit-leak-free: 2.1.2
+      pino-abstract-transport: 2.0.0
+      pino-std-serializers: 7.0.0
+      process-warning: 4.0.1
+      quick-format-unescaped: 4.0.4
+      real-require: 0.2.0
+      safe-stable-stringify: 2.5.0
+      sonic-boom: 4.2.0
+      thread-stream: 3.1.0
+
   pngjs@5.0.0: {}
 
   prisma@6.6.0(typescript@5.8.3):
@@ -2215,6 +2508,10 @@ snapshots:
       - supports-color
 
   process-nextick-args@2.0.1: {}
+
+  process-warning@4.0.1: {}
+
+  process-warning@5.0.0: {}
 
   progress@2.0.3: {}
 
@@ -2282,6 +2579,8 @@ snapshots:
     dependencies:
       side-channel: 1.1.0
 
+  quick-format-unescaped@4.0.4: {}
+
   range-parser@1.2.1: {}
 
   raw-body@2.5.2:
@@ -2301,6 +2600,8 @@ snapshots:
       string_decoder: 1.1.1
       util-deprecate: 1.0.2
 
+  real-require@0.2.0: {}
+
   redis-errors@1.2.0: {}
 
   redis-parser@3.0.0:
@@ -2311,15 +2612,31 @@ snapshots:
 
   require-directory@2.1.1: {}
 
+  require-from-string@2.0.2: {}
+
   require-main-filename@2.0.0: {}
 
   resolve-from@4.0.0: {}
+
+  ret@0.5.0: {}
+
+  reusify@1.1.0: {}
+
+  rfdc@1.4.1: {}
 
   safe-buffer@5.1.2: {}
 
   safe-buffer@5.2.1: {}
 
+  safe-regex2@5.0.0:
+    dependencies:
+      ret: 0.5.0
+
+  safe-stable-stringify@2.5.0: {}
+
   safer-buffer@2.1.2: {}
+
+  secure-json-parse@4.0.0: {}
 
   semver@7.7.1: {}
 
@@ -2351,6 +2668,8 @@ snapshots:
       - supports-color
 
   set-blocking@2.0.0: {}
+
+  set-cookie-parser@2.7.1: {}
 
   setprototypeof@1.2.0: {}
 
@@ -2431,8 +2750,14 @@ snapshots:
       ip-address: 9.0.5
       smart-buffer: 4.2.0
 
+  sonic-boom@4.2.0:
+    dependencies:
+      atomic-sleep: 1.0.0
+
   source-map@0.6.1:
     optional: true
+
+  split2@4.2.0: {}
 
   sprintf-js@1.1.3: {}
 
@@ -2482,6 +2807,12 @@ snapshots:
   text-decoder@1.2.3:
     dependencies:
       b4a: 1.6.7
+
+  thread-stream@3.1.0:
+    dependencies:
+      real-require: 0.2.0
+
+  toad-cache@3.7.0: {}
 
   toidentifier@1.0.1: {}
 
