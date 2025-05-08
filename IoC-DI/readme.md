@@ -596,6 +596,40 @@ schedule.scheduleJob('0 30 0 * * *', () => {
 ## OSS
 - OSS（Object Storage Service）是一种云存储服务，提供了一种高度可扩展的、安全可靠的对象存储解决方案
 - OSS 对象存储以对象为基本存储单元，每个对象都有唯一的标识符（称为对象键）和数据。这些对象可以是任意类型的文件，如文档、图片、视频等。OSS 提供了高可用性、高扩展性和高安全性的存储服务，适用于各种应用场景，包括数据备份与归档、静态网站托管、大规模数据处理、移动应用程序存储等。
+## rabbitmq
+- RabbitMQ是一个开源的，在AMQP基础上完整的，可复用的企业消息系统。
+  - AMQP(高级消息队列协议) 实现了对于消息的排序，点对点通讯，和发布订阅，保持可靠性、保证安全性。
+- 支持主流的操作系统，Linux、Windows、MacOS等
+- 多种开发语言支持，Java、Python、Ruby、.NET、PHP、C/C++、javaScript等
+### RabbitMQ核心概念
+1. 消息：在RabbitMQ中，消息是传递的基本单元。它由消息体和可选的属性组成
+2. 生产者Producer：生产者是消息的发送方，它将消息发送到RabbitMQ的交换器（Exchange）中
+3. 交换器Exchange：交换器接收从生产者发送的消息，并根据特定的规则将消息路由到一个或多个队列中
+4. 队列Queue：队列是消息的接收方，它存储了待处理的消息。消费者可以从队列中获取消息并进行处理
+5. 消费者Consumer：消费者是消息的接收方，它从队列中获取消息并进行处理
+- https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71ad107b341142289d216f447b588ebc~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=1727&h=500&s=470698&e=png&b=fffdfd
+### 安装
+1. 安装Rabbit MQ的依赖环境erlang
+  - MQ是基于这个语言开发的
+  - www.erlang.org/downloads
+  - 安装完成之后 新增一个环境变量
+    - ERLANG_HOME -> 对应的目录例如(D:\erlang\Erlang OTP)
+    - 然后path 新增 %ERLANG_HOME%\bin
+  - 打开cdm 输入 erl 没有报错即可成功
+2. 安装mq
+  - 下载https://www.rabbitmq.com/docs/install-windows
+  - 配置环境变量：安装目录/sbin
+3. 启动MQ
+  - 安装MQ插件拥有可视化面板
+    - rabbitmq-plugins enable rabbitmq_management
+  - 启动MQ
+    - rabbitmq-server.bat start
+    - 如果保存端口被占用，则可能是安装完成时勾选了自启动，需要win+r 输入services.msc 找到rabbitmq 停止服务和改为手动启用
+  - 访问 http://localhost:15672/#/ 账号密码都是 guest
+### 应用场景
+1. 微服务之间的通讯，或者跨语言级别通讯
+2. 异步任务，比如执行完成一个接口需要发送邮件，我们无需等待邮件发送完成再返回，我们可以直接返回结果，在异步任务中处理邮件。
+3. 日志的收集和分发，将应用程序的日志消息发送到 RabbitMQ 队列中，然后使用消费者进行处理和分发。这样可以集中管理和处理日志，提供实时监控和分析
 
 
 
