@@ -640,6 +640,26 @@ schedule.scheduleJob('0 30 0 * * *', () => {
     2. Topic（主题）模式： 把消息放到交换机指定key的队列里面，额外增加使用"*"匹配一个单词或使用"#"匹配多个单词
     3. Headers（头部）模式：把消息放到交换机头部属性去匹配队列
     4. Fanout（广播）模式：把消息放入交换机所有的队列，实现广播
+#### 总结
+- 通过使用RabbitMQ作为缓冲，避免数据库服务崩溃的风险。生产者将消息放入队列，消费者从队列中读取消息并进行处理，随后确认消息已被处理。在应用之间存在一对多的关系时，可以使用Exchange交换机根据不同的规则将消息转发到相应的队列：
+1. 直连交换机（direct exchange）：根据消息的路由键（routing key）将消息直接转发到特定队列。
+2. 主题交换机（topic exchange）：根据消息的路由键进行模糊匹配，将消息转发到符合条件的队列。
+3. 头部交换机（headers exchange）：根据消息的头部信息进行转发。
+4. 广播交换机（fanout exchange）：将消息广播到交换机下的所有队列
+### MQ高级用法
+#### 延时消息
+  - 什么是延时消息?
+    - Producer 将消息发送到 MQ 服务端，但并不期望这条消息立马投递，而是延迟一定时间后才投递到 Consumer 进行消费，该消息即延时消息
+  - 插件安装
+    - https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/releases
+    - 把下载好的文件拖到rabbitMQ下面的plugins目录里面，如D:\work\rabbitmq\rabbitmq_server-4.1.0\plugins
+    - 然后在cmd窗口执行 rabbitmq-plugins enable rabbitmq_delayed_message_exchange
+  - 检查是否成功
+    - 打开可视化面板，访问 http://localhost:15672/#/ 账号密码都是 guest
+    - 在Exchanges下的Add a new exchange中的type选项会多出一个x-delayed-messagee
+##### 应用场景
+  - 现在是2024-06-06 半夜1.08分，我选择外卖预约中午的11.00 - 11.20 左右的外卖，我如果选择下单，那么这个单不会立马推送到商家的客户端里面，而是存放到消息队列，使用延时消息，在差不多的时间段例如10.30左右才会把这个单推送到商家的客户端，这样商家出餐10分钟，骑手送20-30分钟左右，送过来就差不多11点左右
+
 
 
 
